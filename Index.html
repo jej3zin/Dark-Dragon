@@ -1,17 +1,172 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <title>Dark Dragon</title>
-    <meta name="author" content="Jean H. De Oliveira" />
-    <meta name="description" content="" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Dragon</title>
+    <meta name="author" content="jej3zin" />
+    <meta name="description" content="Maior plataforma de games do mundo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="keywords" content="" />
 
+    <link rel="icon" href="./Asset/Logo_DarkDragon.png" />
     <link rel="stylesheet" href="./CSS/Style.css" />
-    <link rel="icon" href="./IMG/" />
   </head>
   <body>
+    <header class="head">
+      <div class="head-box">
+        <button class="nav-head_btn toggle">
+          <ion-icon class="head-icons" name="menu"></ion-icon>
+        </button>
+
+        <a
+          href="./Index.html"
+          title="Página inicial da Dark Dragon"
+          class="nav-logo"
+        >
+          <h2 class="nav_title">Dark Dragon</h2>
+          <img src="./Asset/Logo_DarkDragon.png" alt="Logo_DarkDragon" />
+        </a>
+      </div>
+
+      <div class="head-box_user">
+        <button onclick="toggleDropGames()" class="head_btns btndropdown">
+          <ion-icon
+            class="head-icons"
+            name="game-controller-outline"
+          ></ion-icon>
+        </button>
+
+        <button onclick="toggleDropNotif()" class="head_btns btndropdown">
+          <ion-icon class="head-icons" name="notifications-outline"></ion-icon>
+        </button>
+
+        <button onclick="toggleDropUser()" class="head_btns btndrop">
+          <ion-icon class="head-icons" name="person-circle-outline"></ion-icon>
+        </button>
+      </div>
+    </header>
+
+    <div id="dropdownContNotif" class="head-dropdown02">
+        <header class="drop-head02">
+            <h2 class="notif-title">Notificações</h2>
+        </header>
+    </div>
+
+    <div id="dropdownContUser" class="head-dropdown01">
+      <header class="drop-head">
+        <div class="drop-div">
+          <img src="../Asset/Logo_DarkDragon.png" alt="photo" />
+        </div>
+        <span class="drop-username"
+          ></ion-icon>Dark
+          Dragon</span
+        >
+      </header>
+
+      <div class="divisorbar">
+        <span></span>
+      </div>
+
+      <main class="drop-main">
+        <li class="drop_list">
+          <a href="#" class="drop-link"
+            ><ion-icon class="drop-icons" name="settings-outline"></ion-icon
+            >Configurações
+          </a>
+        </li>
+
+        <li class="drop_list">
+          <a href="#" class="drop-link"
+            ><ion-icon
+              class="drop-icons"
+              name="chatbox-ellipses-outline"
+            ></ion-icon
+            >Feedback</a
+          >
+        </li>
+
+        <li class="drop_list">
+          <a href="#" class="drop-link"
+            ><ion-icon class="drop-icons" name="help-circle-outline"></ion-icon
+            >Ajuda</a
+          >
+        </li>
+      </main>
+    </div>
+
+    <nav class="navbar mySidebar">
+      <!-- <header class="nav-head">
+        <button class="nav-head_btn toggle">
+          <ion-icon class="head-icons" name="menu"></ion-icon>
+        </button>
+
+        <a
+          href="../Index.html"
+          title="Página inicial da Dark Dragon"
+          class="nav-logo"
+        >
+          <h2 class="nav_title">Dark Dragon</h2>
+          <img src="../Asset/Logo_DarkDragon.png" alt="Logo_DarkDragon" />
+        </a>
+      </header> -->
+
+      <!-- <div class="divisorbar">
+        <span></span>
+      </div> -->
+
+      <ul class="nav-ul">
+        <li class="nav-list">
+          <a href="#" class="nav-link"
+            ><ion-icon class="nav-icons" name="home-outline"></ion-icon>Home</a
+          >
+        </li>
+
+        <li class="nav-list">
+          <a href="#" class="nav-link">
+            <ion-icon class="nav-icons" name="newspaper-outline"></ion-icon>
+            News</a
+          >
+        </li>
+
+        <li class="nav-list">
+          <a href="#" class="nav-link"
+            ><ion-icon class="nav-icons" name="cart-outline"></ion-icon>Store</a
+          >
+        </li>
+
+        <li class="nav-list">
+          <a href="#" class="nav-link">
+            <ion-icon class="nav-icons" name="trending-up-outline"></ion-icon>
+            Ranking</a
+          >
+        </li>
+      </ul>
+
+      <div class="divisorbar">
+        <span></span>
+      </div>
+
+      <footer class="nav-foot">
+        <li class="nav-foot_list">
+          <a href="#" class="nav-btn nav-foot_btn-profile"
+            ><ion-icon class="nav-icons" name="library-outline"></ion-icon>
+            Library</a
+          >
+        </li>
+
+        <li class="nav-foot_list">
+          <a href="#" class="nav-btn nav-foot_btn-profile"
+            ><ion-icon
+              class="nav-icons"
+              name="person-circle-outline"
+            ></ion-icon>
+            Dark Dragon</a
+          >
+        </li>
+      </footer>
+    </nav>
+
     <header class="container-header">
       <div class="hdc-box">
         <div class="hds-box">
@@ -46,7 +201,7 @@
       <nav class="menu-header">
         <ul class="ul__menu-h">
           <li><a class="a__menu-h" href="./Index.html">Início</a></li>
-          <li><a class="a__menu-h" href="#">News</a></li>
+          <li><a class="a__menu-h" href="./404page.html">News</a></li>
           <li><a class="a__menu-h" href="#">Shop</a></li>
           <li>
             <a class="a__menu-h" href="#"
@@ -64,8 +219,8 @@
       </nav>
 
       <div class="box-profile">
-        <a href="./Login/login.html" class="button-login"
-          ><ion-icon class="icon-profile" name="person-circle-sharp"></ion-icon
+        <a href="./Login/login.html" class="button-login">
+          <ion-icon class="icon-profile" name="person-circle-sharp"></ion-icon
         ></a>
       </div>
     </header>
