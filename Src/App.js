@@ -6,11 +6,31 @@ let p = setInterval(function () {
 }, 6000);
 // Dropdowns
 function toggleNotif() {
-  document.getElementById('dropNotif').classList.toggle('show');
+  const dropNotif = document.getElementById('dropNotif');
+  dropNotif.classList.toggle('show');
+
+  document.addEventListener('click', function handleClickOutside(event) {
+    if (
+      !dropNotif.contains(event.target) &&
+      !event.target.closest('#btnNotif')
+    ) {
+      dropNotif.classList.remove('show');
+      document.removeEventListener('click', handleClickOutside);
+    }
+  });
 }
 function toggleUser() {
-  document.getElementById('dropUser').classList.toggle('show');
+  const dropUser = document.getElementById('dropUser');
+  dropUser.classList.toggle('show');
+
+  document.addEventListener('click', function handleClickOutside(event) {
+    if (!dropUser.contains(event.target) && !event.target.closest('#btnUser')) {
+      dropUser.classList.remove('show');
+      document.removeEventListener('click', handleClickOutside);
+    }
+  });
 }
+
 /* Error Msg */
 function btnLogin() {
   document.getElementById('boxMsg').classList.toggle('show');

@@ -132,9 +132,10 @@ div#preloader {
 }
 .Msg-Error {
   height: 40vh;
-  width: 40vw;
+  width: 30vw;
   color: var(--Col);
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 1;
@@ -143,6 +144,29 @@ div#preloader {
   border: 1px solid var(--Divisor);
   box-shadow: 0 12px 2rem 0 rgba(59, 59, 59, 0.37);
   transition: var(--Ani);
+  animation: showAlert 0.3s;
+}
+@keyframes showAlert {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  1% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  45% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 .screen_Error.show {
   display: flex;
@@ -163,7 +187,7 @@ div#preloader {
 }
 .CloseWindow {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   font-size: 1.1rem;
   text-transform: uppercase;
   color: var(--Kustom);
